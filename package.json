@@ -1,0 +1,20 @@
+{
+  "name": "app",
+  "private": true,
+  "packageManager": "bun@1.2.4",
+  "scripts": {
+    "develop": "turbo run develop",
+    "build": "turbo run build",
+    "bundle": "turbo run bundle",
+    "package": "turbo run package",
+    "cdk": "bun run --cwd packages/cdk cdk"
+  },
+  "workspaces": [
+    "packages/*",
+    "services/*"
+  ],
+  "devDependencies": {
+    "prettier": "^3.5.2",
+    "turbo": "^2.4.2"
+  }
+}

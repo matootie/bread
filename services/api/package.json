@@ -1,0 +1,22 @@
+{
+  "name": "@app/api",
+  "main": "./lib/out/stack.js",
+  "types": "./lib/out/stack.d.ts",
+  "dependencies": {
+    "hono": "^4.7.0"
+  },
+  "devDependencies": {
+    "@app/tsconfig": "workspace:*",
+    "@types/bun": "latest",
+    "aws-cdk-lib": "^2.178.1",
+    "bun-plugin-dts": "^0.3.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "develop": "bun run --watch --no-clear-screen src/main.ts",
+    "build": "bun lib/build.ts",
+    "package": "mkdir -p out && cd src/ && zip -r app.zip ./* && cd - && mv -v src/app.zip out/app.zip"
+  }
+}

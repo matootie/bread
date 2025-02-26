@@ -1,0 +1,26 @@
+{
+  "name": "@app/client",
+  "main": "./lib/out/stack.js",
+  "types": "./lib/out/stack.d.ts",
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@app/tsconfig": "workspace:*",
+    "@types/bun": "latest",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "aws-cdk-lib": "^2.178.1",
+    "bun-plugin-dts": "^0.3.0",
+    "bun-plugin-tailwind": "^0.0.14"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "develop": "bun src/index.html",
+    "build": "bun lib/build.ts",
+    "package": "mkdir -p out && cd dist/ && zip -r client.zip ./* && cd - && mv -v dist/client.zip out/client.zip"
+  }
+}

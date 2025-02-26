@@ -1,0 +1,21 @@
+{
+  "name": "@app/cdk",
+  "dependencies": {
+    "@app/api": "workspace:*",
+    "@app/client": "workspace:*"
+  },
+  "devDependencies": {
+    "@app/tsconfig": "workspace:*",
+    "@types/bun": "latest",
+    "aws-cdk": "^2.177.0",
+    "aws-cdk-lib": "^2.178.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "package": "mkdir -p out && zip -j out/redirect.zip src/redirect.js",
+    "synth": "cdk synth",
+    "deploy": "cdk deploy"
+  }
+}

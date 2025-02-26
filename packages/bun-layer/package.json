@@ -1,0 +1,20 @@
+{
+  "name": "@app/bun-layer",
+  "main": "./lib/out/stack.js",
+  "types": "./lib/out/stack.d.ts",
+  "scripts": {
+    "build": "bun lib/build.ts",
+    "package": "bun scripts/build-layer.ts"
+  },
+  "devDependencies": {
+    "@app/tsconfig": "workspace:*",
+    "@oclif/core": "^4.2.6",
+    "@types/bun": "latest",
+    "aws-cdk-lib": "^2.178.0",
+    "jszip": "^3.10.1",
+    "bun-plugin-dts": "^0.3.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

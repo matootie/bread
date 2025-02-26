@@ -1,0 +1,3 @@
+{
+  "app": "bun bin/cdk.ts"
+}
