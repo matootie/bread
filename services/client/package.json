@@ -19,7 +19,7 @@
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "develop": "bun src/index.html",
+    "develop": "bun lib/develop.ts",
     "build": "bun lib/build.ts",
     "package": "mkdir -p out && cd dist/ && zip -r client.zip ./* && cd - && mv -v dist/client.zip out/client.zip"
   }

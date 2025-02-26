@@ -19,3 +19,9 @@ How to use:
 - `bun cdk synth` will synthesize a CloudFormation template.
 - `bun cdk diff` will show a diff between deployed CloudFormation state and local changes.
 - `bun cdk deploy` will deploy the application to AWS.
+
+### Development Server
+
+The development server will hot-reload client changes. When using `bun run develop` the API server will also restart when changes are made.
+
+Additionally, there's a proxy available in the development server that mimicks the CloudFront configuration. Any requests made to `/api` or `/api/*` will be forwarded to the API server locally. This way, you can hard code in your API request URLs in the client without worrying about local/deployed servers.
